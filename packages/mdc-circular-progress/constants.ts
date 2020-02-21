@@ -27,7 +27,7 @@ export const cssClasses = {
 };
 
 export const strings = {
-  DETERM_CIRCLE_SELECTOR: '.mdc-circular-progress__determ-circle',
+  DETERMINATE_CIRCLE_SELECTOR: '.mdc-circular-progress__determinate-circle',
   ARIA_VALUENOW: 'aria-valuenow',
   RADIUS: 'r',
   STROKE_DASHOFFSET: 'stroke-dashoffset',

@@ -21,20 +21,12 @@
  * THE SOFTWARE.
  */
 
-/**
- * Defines the shape of the adapter expected by the foundation.
- * Implement this adapter for your framework of choice to delegate updates to
- * the component in your framework of choice. See architecture documentation
- * for more details.
- * https://github.com/material-components/material-components-web/blob/master/docs/code/architecture.md
- */
-export interface MDCCircularProgressAdapter {
-  addClass(className: string): void;
-  forceLayout(): void;
-  getDeterminateCircleAttribute(attributeName: string): string|null;
-  hasClass(className: string): boolean;
-  removeClass(className: string): void;
-  removeAttribute(attributeName: string): void;
-  setAttribute(attributeName: string, value: string): void;
-  setDeterminateCircleAttribute(attributeName: string, value: string): void;
-}
+import 'jasmine';
+import * as path from 'path';
+import {expectStylesWithNoFeaturesToBeEmpty} from '../../../testing/featuretargeting';
+
+
+describe('mdc-circular-progress.scss', () => {
+  expectStylesWithNoFeaturesToBeEmpty(
+      path.join(__dirname, 'feature-targeting-any.test.css'));
+});
